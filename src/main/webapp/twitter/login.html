@@ -15,6 +15,7 @@
 
     <!-- Custom styles for this template -->
     <link href="/static/css/main.css" rel="stylesheet">
+    <link href="/static/css/signin.css" rel="stylesheet">
 
   </head>
   <body>
@@ -37,10 +38,20 @@
       <div class="row">
         <div class="col-sm-8 blog-main">
           <div class="blog-post">
-            <h2>RequireJS 샘플</h2>
             <p class="lead blog-description"> 
-              콘솔 로그로 'Hello World' 출력하는 샘플입니다.<br/>
-              콘솔 로그 확인하세요. 
+              <form class="form-signin">
+                <h2 class="form-signin-heading">Please sign in with Twitter</h2>
+                <label for="inputId" class="sr-only">Twitter ID</label>
+                <input type="text" id="inputId" class="form-control" placeholder="Twitter ID" required autofocus>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                  </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+              </form>
             </p>
           </div><!--  /.blog-post -->
         </div><!--  /.blog-main -->

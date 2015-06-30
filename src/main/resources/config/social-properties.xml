@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>social.properties</comment>
+	<!-- Twitter -->
+	<entry key="oauth.twitter.key">oERChCTjDtQr3GLvh9KPOEK5l</entry>
+	<entry key="oauth.twitter.secret">eD0k9P8c84yF4m2dLZDLvP2pylbdfXPwehkOt03rNXTEBuKZuF</entry>
+	<entry key="oauth.twitter.callback">http://jstest.toast.com/twitter/oauth_callback.nhn</entry>
+	
+	<!-- Facebook -->
+	<entry key="oauth.facebook.key">352710578087994</entry>
+	<entry key="oauth.facebook.secret">256aeacbbd678926607a230712f8d4bd</entry>
+	<entry key="oauth.facebook.callback">http://localhost:7777/social-api-pilot/facebook/oauth_callback</entry>
+	<entry key="oauth.facebook.scope">publish_stream,read_stream</entry>
+	
+</properties>
