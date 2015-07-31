@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title>Angular Busy Demo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../dist/angular-busy.css" rel="stylesheet">
+
+</head>
+<body ng-controller="DemoCtrl" style="padding-top: 0px">
+
+	<div>
+		<form role="form">
+			<button class="btn btn-default pull-right" ng-click="demo()">Demo</button>
+		</form>
+
+		<div
+			cg-busy="{promise:promise,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
+		</div>
+
+	</div>
+
+
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/angular-animate/angular-animate.js"></script>
+	<script src="../dist/angular-busy.js"></script>
+	<script src="demo.js"></script>
+
+</body>
+</html>
