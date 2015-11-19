@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/resources/js/lib/jquery-ui-1.11.4.custom/jquery-ui.css">
+<link rel="stylesheet" href="/resources/js/lib/jquery-ui-1.11.4.custom/jquery-ui.structure.css">
+<link rel="stylesheet" href="/resources/js/lib/jquery-ui-1.11.4.custom/jquery-ui.theme.css">
+<style>
+.ui-datepicker{ font-size: 12px; width: 200px; }
+.ui-datepicker select.ui-datepicker-month{ width:30%; font-size: 11px; }
+.ui-datepicker select.ui-datepicker-year{ width:40%; font-size: 11px; }
+</style>
+</head>
+<body>
+<form>
+<input type="text" id="testDatepicker">
+</form>
+
+<script src="/resources/js/lib/jquery/jquery-2.1.4.js"></script>
+<script src="/resources/js/lib/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+<script>
+$(document).ready(function() {
+    $( "#testDatepicker" ).datepicker({
+    	monthNames : ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+    	dayNames: ['월', '화', '수', '목', '금', '토', '일'],
+    	dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'],
+    	showMonthAfterYear : true,
+    	dateFormat : 'yy/mm/dd'
+    });
+});
+</script>
+</body>
+</html>

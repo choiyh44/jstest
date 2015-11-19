@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0;-webkit-text-size-adjust:none}
+
+.org .h_search{position:absolute;z-index:10;top:64px;right:0;width:176px;height:28px;padding:4px 0 0 2px;background:url('/static/common/img/sp.png?f29154c2eac1') 0 -503px no-repeat;line-height:20px}
+.org .h_search .inp_txt{width:109px;height:19px;padding:6px 0 0 5px;border:0;line-height:19px}
+.org .h_search .btn_search{width:24px;height:24px;background-position:-139px -451px;vertical-align:middle;margin-left:0}
+.org .h_search .line{display:inline-block;width:1px;height:20px;border-left:1px solid #ccc;vertical-align:middle}
+.org .h_search.on .h_searchauto{display:block}
+.org .h_search.on .more{background-position:-80px -476px}
+.org .h_search .more{width:22px;height:24px;background-position:-56px -476px;vertical-align:middle}
+.org .h_searchauto{position:relative;display:none}
+
+.org .h_searchauto .inner{position:absolute;right:0;width:178px;background:#fff}
+.org .h_searchauto ol{padding:3px 0;border:1px solid #bdbdbd;border-bottom:0px solid #bdbdbd}
+.org .h_searchauto li a{display:block;padding:0 0 0 9px;color:#888;font-size:12px;line-height:20px}
+.org .h_searchauto li a span.key{color:#4a95e5}
+.org .h_searchauto li a:hover{background:#f5f5f5}
+.org .h_searchauto .auto{position:relative;width:178px;height:31px;background:url('/static/common/img/bg_ly3.png?946780f63357') 0 0 no-repeat;line-height:30px;text-align:right}
+.org .h_searchauto .auto a{display:inline;margin-right:8px;border-bottom:solid 1px #777;color:#777;font-size:11px}
+.org .h_searchauto .auto a:hover{text-decoration:none}
+.org .h_searchauto .tootip{position:absolute;top:-20px;right:0px;width:201px;height:23px;background-position:0 -105px}
+
+.h_search{position:absolute;z-index:10;top:64px;right:0;width:176px;height:28px;padding:4px 0 0 2px;background:url('/static/common/img/sp.png?f29154c2eac1') 0 -503px no-repeat;line-height:20px}
+.h_search .inp_txt{width:109px;height:19px;padding:6px 0 0 5px;border:1;line-height:19px}
+.h_search .btn_search{width:24px;height:24px;background-position:-139px -451px;vertical-align:middle;margin-left:0}
+.h_search .line{display:inline-block;width:1px;height:20px;border-left:1px solid #ccc;vertical-align:middle}
+.h_search.on .h_searchauto{display:block}
+.h_search.on .more{background-position:-80px -476px}
+.h_search .more{width:22px;height:24px;background-position:-56px -476px;vertical-align:middle}
+.h_searchauto{position:relative;display:none}
+.h_searchauto .inner{position:absolute;right:0;width:178px;background:#fff}
+.h_searchauto ol{padding:3px 0;border:1px solid #bdbdbd;border-bottom:0px solid #bdbdbd}
+.h_searchauto li a{display:block;padding:0 0 0 9px;color:#888;font-size:12px;line-height:20px}
+.h_searchauto li a span.key{color:#4a95e5}
+.h_searchauto li a:hover{background:#f5f5f5}
+.h_searchauto .auto{position:relative;width:178px;height:31px;background:url('/static/common/img/bg_ly3.png?946780f63357') 0 0 no-repeat;line-height:30px;text-align:right}
+.h_searchauto .auto a{display:inline;margin-right:8px;border-bottom:solid 1px #777;color:#777;font-size:11px}
+.h_searchauto .auto a:hover{text-decoration:none}
+.h_searchauto .tootip{position:absolute;top:-20px;right:0px;width:201px;height:23px;background-position:0 -105px}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+.h_search{position:absolute;z-index:10;top:-3px;right:0;width:181px;height:28px;line-height:30px;border:1px solid #c0c5cb}
+.h_search .inp_txt{width:145px;height:18px;padding:5px 0 5px 8px;border:0;line-height:18px;vertical-align:top}
+.h_search .btn_search{position:absolute;top:0;right:0;width:28px;height:28px}
+.h_search .btn_search .sp{height:14px;width:14px;background-position:-37px -50px;vertical-align:middle}
+
+.h_search .h_search_type {display:none;}
+.h_search .h_search_type ul {list-style:none;}
+.h_search .h_search_type ul li {float:left;position:relative;line-height:14px;height:14px;list-style:none;}
+</style>
+</head>
+<body>
+<form action="#" method="GET">
+	<div class="h_search"><!-- [D] 자동완성 show class="h_search on" -->
+		<input type="hidden" name="headerSearchType" />
+		<input type="text" name="" id="headerSearchText" title="검색" class="inp_txt" autocomplete="off">
+		<button type="button" class="btn_search" id="headerSearchBtn"><span class="sp">검색</span></button>
+		<!-- 검색조건 -->
+		<div class="h_search_type">
+			<ul id="h_search_type_box">
+				<li><a href="#" id="h_search_type_all"></a></li>
+				<li><a href="#" id="h_search_type_content"></a></li>
+				<li><a href="#" id="h_search_type_board"></a></li>
+			</ul>
+		</div>
+		<!-- //검색조건 -->
+	</div>
+
+</form>
+
+<script type="text/javascript" src="/resources/js/lib/jquery/jquery-2.1.4.js"></script>
+<script>
+var runHeaderSearch = function(){
+	var searchText = $('#headerSearchText').val().replace(/^\s+|\s+$/gm,'');
+	if (searchText === '') {
+		return;
+	}
+	location.href="/search?searchText="+searchText + "&searchType=" + $('#headerSearchType').val();
+};
+
+$("#headerSearchText").keyup(function(e) {
+	if (e.keyCode == 13) {
+		runHeaderSearch();
+		return false;
+	}
+	var searchText = $('#headerSearchText').val();
+	if (searchText === '') {
+		$(".h_search_type").hide();
+	}
+	else {
+		$("#h_search_type_all").text("전체검색: " + searchText);
+		$("#h_search_type_content").text("컨텐츠검색: " + searchText);
+		$("#h_search_type_board").text("게시글검색: " + searchText);
+		$(".h_search_type").show();
+	}
+});
+
+$("#headerSearchBtn").click(runHeaderSearch);
+$("#h_search_type_all").click(function() {
+	$('#headerSearchType').val("");
+	runHeaderSearch();
+});
+$("#h_search_type_content").click(function() {
+	$('#headerSearchType').val("10");
+	runHeaderSearch();
+});
+$("#h_search_type_board").click(function() {
+	$('#headerSearchType').val("20");
+	runHeaderSearch();
+});
+
+</script>
+
+<!-- //search -->
+</body>
+</html>

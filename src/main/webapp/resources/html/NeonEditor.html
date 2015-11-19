@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Editor CSS strart -->
+<link rel="stylesheet" href="/resources/css/lib/editor2/contentStyle.css">
+<link rel="stylesheet" href="/resources/css/lib/editor2/neonEditor.css">
+<link rel="stylesheet" href="/resources/css/lib/editor2/codemirror.css">
+<link rel="stylesheet" href="/resources/css/lib/editor2/github.css">
+<!-- Editor CSS end -->
+
+<style>
+
+</style>
+
+<!-- Editor strart -->
+<script src="/resources/js/lib/jquery/jquery-2.1.4.js"></script>
+<script src="/resources/js/lib/editor2/code-snippet.js"></script>
+<script src="/resources/js/lib/editor2/marked.js"></script>
+<script src="/resources/js/lib/editor2/toMark.js"></script>
+<script src="/resources/js/lib/editor2/codemirror.js"></script>
+<script src="/resources/js/lib/editor2/highlight.pack.js"></script>
+<script src="/resources/js/lib/editor2/squire-raw.js"></script>
+<script src="/resources/js/lib/editor2/neonEditor.js"></script>
+<!-- Editor end -->
+</head>
+<body>
+<form id="form1" name="form1" method="post">
+<div id="editSection1"></div>
+<input type="hidden" name="content1" />
+<div id="editSection2"></div>
+<input type="hidden" name="content2" />
+<div id="editSection3"></div>
+<input type="hidden" name="content3" />
+<button id="submit">submit</buttom>
+</form>
+
+<script>
+$('#editSection1').neonEditor({
+    initialEditType: 'markdown',
+    previewStyle: 'tab',
+    height: 300,
+    contentCSSStyles: [
+        '/resources/css/lib/editor2/contentStyle.css'
+    ],
+    events: {
+        'load': function() {
+            console.log('handler');
+            $('#editSection1').neonEditor("setValue", "setValue test1");
+        }
+    }
+});
+$('#editSection2').neonEditor({
+    initialEditType: 'markdown',
+    previewStyle: 'tab',
+    height: 300,
+    contentCSSStyles: [
+        '/resources/css/lib/editor2/contentStyle.css'
+    ],
+    events: {
+        'load': function() {
+            console.log('handler');
+            $('#editSection2').neonEditor("setValue", "setValue test2");
+        }
+    }
+});
+$('#editSection3').neonEditor({
+    initialEditType: 'markdown',
+    previewStyle: 'tab',
+    height: 300,
+    contentCSSStyles: [
+        '/resources/css/lib/editor2/contentStyle.css'
+    ],
+    events: {
+        'load': function() {
+            console.log('handler');
+            $('#editSection3').neonEditor("setValue", "setValue test3");
+        }
+    }
+});
+
+$("#submit").click(function() {
+	var content1 = $('#editSection1').neonEditor("getValue");
+	var content2 = $('#editSection2').neonEditor("getValue");
+	var content3 = $('#editSection3').neonEditor("getValue");
+	alert(content1 + "\n\n" + content2 + "\n\n" + content3);
+});
+
+//$('#editSection').neonEditor("setValue", "setValue test");
+</script>
+</body>
+</html>
